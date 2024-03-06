@@ -28,14 +28,27 @@
             alt=""
           />
           <a href="/view/index.html">Home</a>
-          <a href="">My Project</a>
+          <a href="/view/project.html">My Project</a>
+          <a href="/view/testimonial.html">My Testimonial</a>
         </div>
         <div class="nav-right">
           <a href="/view/contact.html">Contact Me</a>
+          <div class="burger">
+            <button onclick="openHamburger()">
+             <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
       </div>
     </nav>
+    <div class="items-hamburger" id="items-bars">
+      <a href="/view/index.html">Home</a>
 
+      <a href="/view/project.html">My Project</a>
+
+      <a href="/view/testimonial.html">My Testimonial</a>
+
+      <a href="/view/contact.html">Contact Me</a>
+    </div>
     <hr />
     <div class="contener-conten">
       <div class="conten-left">
@@ -84,4 +97,5 @@
       </div>
     </div>
   </body>
+  <script src="/src/asset/js/humburger.js"></script>
 </html>

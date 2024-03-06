@@ -61,6 +61,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+  color: #eaa81b;
 }
 
 .contact-main {
@@ -88,7 +89,7 @@ select {
   justify-content: center;
 }
 
-button {
+.btn-contact button {
   padding: 9px 150px;
   font-weight: bold;
   background-color: #eaa81b;
@@ -108,4 +109,18 @@ body {
 }
 label {
   color: #eaa81b;
+}
+
+.contact-form {
+  box-shadow: 5px 5px 10px rgb(230, 177, 2), -5px -5px 10px rgba(255, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 834px) {
+  .contact-form {
+    width: 100%;
+  }
+
+  .btn-contact button {
+    padding: 9px 75px;
+  }
 }

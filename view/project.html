@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/asset/css/project.css" />
+    <link rel="stylesheet" href="/src/asset/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navigation">
+        <div class="nav-left">
+          <img
+            src="/src/asset/image/3bf826d15ceb64dfc9d3712f5a451838-removebg-preview.png"
+            alt=""
+          />
+          <a href="/view/index.html">Home</a>
+          <a href="#">My Project</a>
+          <a href="/view/testimonial.html">My Testimonial</a>
+        </div>
+        <div class="nav-right">
+          <a href="/view/contact.html">Contact Me</a>
+          <div class="burger">
+            <button onclick="openHamburger()">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="items-hamburger" id="items-bars">
+      <a href="/view/index.html">Home</a>
+
+      <a href="/view/project.html">My Project</a>
+      <a href="/view/testimonial.html">My Testimonial</a>
+
+      <a href="/view/contact.html">Contact Me</a>
+    </div>
+
+    <hr />
+
+    <form class="" onsubmit="addData(event)">
+      <div class="judul-form"><h4>ADD MY PROJECT</h4></div>
+      <div class="conten-project">
+        <label for="title" class="form-label">Project Name</label>
+        <input type="text" class="form-control" name="title" id="title" />
+        <div class="date">
+          <div class="date-left">
+            <label for="startdate" class="form-label">Start Date</label>
+            <input type="date" class="form-control1" id="startdate" />
+          </div>
+          <div class="date-right">
+            <label for="enddate" class="form-label">End Date</label>
+            <input
+              type="date"
+              class="form-control1"
+              name="enddate"
+              id="enddate"
+            />
+          </div>
+        </div>
+        <label for="descrip" class="form-label">Description</label>
+        <textarea
+          name="descrip"
+          id="descrip"
+          cols="30"
+          rows="10"
+          placeholder="type here"
+          class="desc1"
+        ></textarea>
+        <div class="tecno">
+          <label for="Technologies">Technologies</label>
+          <div class="icon-left">
+            <input type="checkbox" name="Technologies" id="node" value="node" />
+            <label for="node">Node Js</label>
+
+            <input
+              style="margin-left: 30px"
+              type="checkbox"
+              name="Technologies"
+              id="golang"
+              value="golang"
+            />
+            <label for="golang">Golang</label>
+          </div>
+          <div class="icon-right">
+            <input
+              type="checkbox"
+              name="Technologies"
+              id="react"
+              value="react"
+            />
+            <label for="react">React Js</label>
+
+            <input
+              style="margin-left: 27px"
+              type="checkbox"
+              name="Technologies"
+              id="java"
+              value="java"
+            />
+            <label for="java">Java</label>
+          </div>
+        </div>
+        <div class="img-i">
+          <label for="img">Upload image</label>
+          <input type="file" id="image" name="image" class="imgup" />
+        </div>
+        <div class="submit-b">
+          <button class="bt-submit" type="submit">Post Project</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- card -->
+    <div class="my-p">
+      <h2>My Project</h2>
+    </div>
+    <div id="contents">
+      <div class="card">
+        <div class="img-p">
+          <img src="/src/asset/image/AI.avif" alt="card" />
+        </div>
+        <div class="tech-a">
+          <a href="/view/detail.html">Technologi Terbaru</a>
+          <p>20 january 2024</p>
+        </div>
+        <div class="descrip-p">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+            reprehenderit non laudantium modi placeat rem, amet, repudiandae
+            exercitationem ratione veritatis corporis natus? Architecto
+            reprehenderit minima perferendis suscipit et illum quae!
+          </p>
+        </div>
+        <div class="icon-card">
+          <i style="margin-left: 5px" class="fa-brands fa-golang"></i>
+
+          <i style="margin-left: 5px" class="fa-brands fa-java"></i>
+
+          <i style="margin-left: 5px" class="fa-brands fa-node-js"></i>
+
+          <i style="margin-left: 5px" class="fa-brands fa-react"></i>
+        </div>
+        <div class="putterr">
+          <div class="putterr-left">
+            <button class="bt-edit">Edit</button>
+          </div>
+          <div class="putterr-right">
+            <button class="bt-hapus">Hapus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/src/asset/js/project.js"></script>
+  <script src="/src/asset/js/humburger.js"></script>
+</html>

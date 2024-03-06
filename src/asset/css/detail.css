@@ -1,0 +1,95 @@
+.card-detail {
+  width: 100%;
+  margin: auto;
+}
+body {
+  background-color: #004643;
+}
+
+.judul-detail {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.judul-detail h2 {
+  margin-top: 2rem;
+}
+.detail {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  /* width: 100%; */
+  padding: 1rem 2rem;
+  width: 100%;
+
+  margin: 0% auto;
+}
+
+.detail-left img {
+  width: 400px;
+  height: 400px;
+}
+.detail-right {
+  margin-left: 100px;
+  padding: 1rem 0;
+
+  text-align: justify;
+}
+.duration i {
+  display: flex;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+.duration p {
+  font-weight: 300;
+}
+.tecno {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.tecno-left i {
+  display: flex;
+  color: black;
+  font-weight: bold;
+}
+.tecno-left p {
+  margin-left: 9px;
+  font-weight: 300;
+}
+.tecno-right p {
+  margin-left: 9px;
+  font-weight: 300;
+}
+.tecno-right i {
+  display: flex;
+  color: black;
+  font-weight: bold;
+}
+.tecno img {
+  width: 40px;
+  margin: 0 3rem;
+}
+.detail-p p {
+  padding: 0 2rem;
+  text-align: justify;
+  background-color: #004643;
+}
+
+@media only screen and (max-width: 834px) {
+  .card-detail {
+    width: 100%;
+  }
+
+  .detail-left img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .detail-right {
+    font-size: 10px;
+  }
+  .detail-right {
+    margin-left: 15px;
+  }
+}

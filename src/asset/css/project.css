@@ -1,0 +1,190 @@
+body {
+  background-color: #004643;
+}
+
+.judul-form {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #eaa81b;
+}
+
+.conten-project {
+  /* border: 1px solid black; */
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  color: #eaa81b;
+}
+
+.date {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+
+.date-left {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-right {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+input {
+  padding: 10px;
+  background-color: #f1efef;
+  border: none;
+  border-radius: 6px;
+}
+
+textarea {
+  padding: 10px;
+  resize: none;
+  background-color: #f1efef;
+  border: none;
+  border-radius: 6px;
+}
+
+.tecno {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-i {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-i input {
+  border: 1px solid black;
+  background-color: #f1efef;
+  border: none;
+}
+
+i {
+  font-size: 20px;
+}
+
+.submit-b {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.bt-submit {
+  padding: 5px 15px;
+  border-radius: 6px;
+  background-color: #eaa81b;
+  color: black;
+  font-weight: bold;
+}
+
+.tecno input {
+  background-color: #f1efef;
+}
+
+/* card */
+
+.my-p {
+  margin-top: 50px;
+}
+
+#contents {
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid black;
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 15px;
+  flex-direction: column;
+}
+
+.my-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-p img {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+
+.tech-a {
+  margin-top: 15px;
+}
+
+.tech-a a,
+p {
+  color: white;
+  text-decoration: none;
+}
+
+.descrip-p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.icon-card {
+  margin-top: 15px;
+  color: white;
+  display: flex;
+}
+
+.putterr {
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+  /* gap: 20px; */
+}
+
+.putterr-left {
+  width: 50%;
+}
+.putterr-right {
+  flex: 50%;
+}
+
+.bt-edit {
+  padding: 2px 40%;
+  background-color: #eaa81b;
+  color: #004643;
+}
+
+.bt-hapus {
+  padding: 2px 35%;
+  background-color: #eaa81b;
+  color: #004643;
+}
+
+@media only screen and (max-width: 834px) {
+  .conten-project {
+    width: 100%;
+  }
+}
