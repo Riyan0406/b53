@@ -170,15 +170,15 @@
               href="/detail-project/{{@index}}"
             >{{this.title}}</a>
             <div class="text-light" style="font-size: 10px; font-weight: 200">
-              <p>{{this.durasiProject}}| {{this.postAt}} | {{this.author}}</p>
+              <p>{{this.created_ad}}|</p>
             </div>
 
             <p class="text-light" style="text-align: justify">
-              {{this.Description}}
+              {{this.description}}
             </p>
           </div>
           <div class="text-light d-flex gap-3" style="font-size: 20px">
-            {{#each Technologies}}
+            {{#each technologies}}
               <i class="fa-brands fa-{{this}}"></i>
             {{/each}}
           </div>
