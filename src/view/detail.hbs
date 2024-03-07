@@ -16,7 +16,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/src/asset/css/detail.css" />
+    <link rel="stylesheet" href="/css/detail.css" />
 
   </head>
   <body>
@@ -91,43 +91,27 @@
         <div class="detail-right">
           <h4>Duration</h4>
           <div class="duration">
-            <i class="fa-solid fa-calendar-days"><p>12 Januari 2023 - 10
-                Februari 2023</p></i>
-            <i class="fa-solid fa-clock"><p>1 Month</p></i>
+            <i class="fa-solid fa-calendar-days"><p
+              >{{dataDami.durasiProject}}</p></i>
+            <i class="fa-solid fa-clock"><p>{{dataDami.postAt}}</p></i>
           </div>
           <h4>Technologies</h4>
           <div class="tecno">
-            <div class="tecno-left">
-              <i class="fa-brands fa-node-js"><p>Node Js</p></i>
-              <i class="fa-brands fa-golang"><p
-                  style="margin-left: 1rem"
-                >Golang</p></i>
-            </div>
-            <div class="tecno-right">
-              <i class="fa-brands fa-react"><p>React Js</p></i>
-              <i class="fa-brands fa-java"><p>Java</p></i>
-            </div>
+            {{#each dataDami.Technologies}}
+              <i
+                style="font-size: 15px; display: flex; gap:1rem;"
+                class="fa-brands fa-{{this}}"
+              ><p>{{this}}</p></i>
+            {{/each}}
           </div>
         </div>
       </div>
       <div class="detail-p">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quis
-          iure. Assumenda quod unde facilis nemo nulla expedita dolore earum
-          corrupti corporis, temporibus ad praesentium dolores quis, cum in
-          nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Cupiditate molestias ipsum eaque, unde omnis natus blanditiis iste
-          vitae corrupti labore facere quis nulla minima aperiam quia non id ab
-          voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Modi deleniti quaerat soluta at ex, ad, sapiente, dicta ab sed vitae
-          velit debitis distinctio similique autem ipsum suscipit facilis nisi.
-          Vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          et assumenda ipsa doloribus? Nostrum deserunt soluta illum atque
-          laboriosam nam suscipit pariatur, perferendis, dignissimos dolorem
-          unde, quia eos? Vel, optio. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Eveniet est veniam harum voluptas doloremque
-          corporis earum provident, repellendus dignissimos a maiores dolores
-          quos aut tempore obcaecati ut alias reprehenderit vero.
+        <p class="text-light fw-bold">
+          {{dataDami.title}}
+        </p>
+        <p class="text-light fw-normal">
+          {{dataDami.Description}}
         </p>
       </div>
     </div>

@@ -152,65 +152,68 @@
       class="d-flex justify-content-center flex-wrap gap-3 p-4 bg-body-secondary"
       id="contents"
     >
-      <div
-        class="card-form d-flex flex-column justify-content-between border rounded p-4"
-        style="background-color: #9dbc98; width: 300px"
-      >
-        <div class="kelas3">
-          <img
-            style="width: 100%; height: 190px; border-radius: 7px"
-            src="/image/AI.avif"
-            alt=""
-          />
-        </div>
-        <div class="">
-          <a
-            class="nav-link text-light fw-bold fs-5"
-            href="/detail-project"
-          >Teknologi Terbaru 2023</a>
-          <div class="text-light" style="font-size: 10px; font-weight: 200">
-            <p>5 September 2023 12:30 WIB | Riyan Maulana</p>
-          </div>
-
-          <p class="text-light" style="text-align: justify">
-            teknologi terbaru ini akan buming pada tahun 2024 nanti , jadi
-            persiapkan diri kalian wahai programmer
-          </p>
-        </div>
-        <div class="text-light d-flex gap-3" style="font-size: 20px">
-          <i class="fa-brands fa-golang"></i>
-          <i class="fa-brands fa-java"></i>
-          <i class="fa-brands fa-react"></i>
-          <i class="fa-brands fa-node-js"></i>
-        </div>
-
+      {{#each dataDami}}
         <div
-          class="d-flex justify-content-center align-items-end mt-2"
-          style="width: 100%"
+          class="card-form d-flex flex-column justify-content-between border rounded p-4"
+          style="background-color: #9dbc98; width: 300px"
         >
-          <div class="w-50">
-            <button
-              class="d-flex justify-content-center border-0 fw-bold"
-              style="padding: 3px 35px; background-color: #f9bc60"
-            >
-              Delete
-            </button>
+          <div class="kelas3">
+            <img
+              style="width: 100%; height: 190px; border-radius: 7px"
+              src="/image/AI.avif"
+              alt=""
+            />
           </div>
-          <div class="w-50">
-            <button
-              class="d-flex justify-content-center border-0 fw-bold"
-              style="
+          <div class="">
+            <a
+              class="nav-link text-light fw-bold fs-5"
+              href="/detail-project/{{@index}}"
+            >{{this.title}}</a>
+            <div class="text-light" style="font-size: 10px; font-weight: 200">
+              <p>{{this.durasiProject}}| {{this.postAt}} | {{this.author}}</p>
+            </div>
+
+            <p class="text-light" style="text-align: justify">
+              {{this.Description}}
+            </p>
+          </div>
+          <div class="text-light d-flex gap-3" style="font-size: 20px">
+            {{#each Technologies}}
+              <i class="fa-brands fa-{{this}}"></i>
+            {{/each}}
+          </div>
+
+          <div
+            class="d-flex justify-content-center align-items-end mt-2"
+            style="width: 100%"
+          >
+            <div class="w-50">
+              <button
+                class="d-flex justify-content-center border-0 fw-bold"
+                style="padding: 3px 35px; background-color: #f9bc60"
+              >
+                <a href="/delete/{{@index}}">Delete</a>
+
+              </button>
+            </div>
+            <div class="w-50">
+              <button
+                class="d-flex justify-content-center border-0 fw-bold"
+                style="
                 padding: 3px 46px;
                 margin-left: 2px;
                 background-color: #f9bc60;
               "
-            >
-              Edit
-            </button>
+              >
+                <a href="/edit/{{@index}}">Edit</a>
+
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      {{/each}}
     </div>
+
   </body>
 
   <script

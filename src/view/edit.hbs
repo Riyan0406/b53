@@ -79,14 +79,14 @@
 
     <form
       method="post"
-      action="/add-project"
-      onsubmit="addData(event)"
+      action="/edit"
       style="background-color: #9dbc98"
       class="p-1 mx-auto mb-0"
     >
       <h3 class="text-light d-flex justify-content-center mt-3">
         Add My Project
       </h3>
+      <input type="hidden" name="id" value="{{dataDami.id}}"/>
       <div style="width: 50%" class="vanila mx-auto">
         <div class="mb-3">
           <label for="title" class="text-light">Title</label>
@@ -95,6 +95,7 @@
             class="form-control bg-body-secondary"
             name="title"
             id="title"
+            value="{{dataDami.title}}"
           />
         </div>
         <div class="mb-3 d-flex">
@@ -105,6 +106,7 @@
               class="form-control bg-body-secondary"
               name="startDate"
               id="startdate"
+              value="{{dataDami.startDate}}"
             />
           </div>
           <div class="w-50 p-1">
@@ -114,6 +116,7 @@
               class="form-control bg-body-secondary"
               name="endDate"
               id="enddate"
+              value="{{dataDami.endDate}}"
             />
           </div>
         </div>
@@ -127,7 +130,7 @@
             name="Description"
             id="descrip"
             style="resize: none; height: 100px"
-          ></textarea>
+          >{{dataDami.Description}}</textarea>
         </div>
         <div class="">
           <label class="text-light" for="Technologies ">Technologies</label>
@@ -138,6 +141,7 @@
               name="Technologies"
               value="node-js"
               id="node"
+              {{#if (arrayIncludes dataDami.Technologies 'node-js')}}checked{{/if}}
             />
             <label class="text-light" for="node">Node Js</label>
             <input
@@ -146,6 +150,7 @@
               name="Technologies"
               value="golang"
               id="golang"
+              {{#if (arrayIncludes dataDami.Technologies 'golang')}}checked{{/if}}
             />
             <label class="text-light" for="golang">Golang</label>
           </div>
@@ -156,6 +161,7 @@
               name="Technologies"
               value="react"
               id="react"
+              {{#if (arrayIncludes dataDami.Technologies 'react')}}checked{{/if}}
             />
             <label class="text-light" for="react">React Js</label>
             <input
@@ -164,6 +170,7 @@
               name="Technologies"
               value="java"
               id="java"
+              {{#if (arrayIncludes dataDami.Technologies 'java')}}checked{{/if}}
             />
             <label class="text-light" for="java">Java</label>
           </div>

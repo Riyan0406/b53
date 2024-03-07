@@ -86,28 +86,28 @@
 const dataCard = [
   {
     author: "Riyan Maulana",
-    image: "/src/asset/image/download2.jpg",
+    image: "/image/download2.jpg",
     quots:
       "Jangan pernah berharap bahwa jalan hidupmu akan seperti jalan hidup orang lain. Perjalanan hidup yang kamu miliki merupakan sesuatu yang unik, seperti dirimu",
     rating: 2,
   },
   {
     author: "riyan Maulana",
-    image: "/src/asset/image/download3.jpg",
+    image: "/image/download3.jpg",
     quots:
       "Impian tidak dapat terwujud dengan sendirinya, akan tetapi impian akan datang ketika seseorang berusaha untuk meraihnya",
     rating: 4,
   },
   {
     author: "Riyan Maulana",
-    image: "/src/asset/image/download4.jpg",
+    image: "/image/download4.jpg",
     quots:
       "Jangan khawatir, seluruh upaya yang kamu lakukan akan berbuah manis. Berusaha saja yang kuat dan berdoa pula yang kuat",
     rating: 3,
   },
   {
     author: "Riyan Maulana",
-    image: "/src/asset/image/dowload5.jpg",
+    image: "/image/dowload5.jpg",
     quots:
       "Kita adalah apa yang kita kerjakan secara berulang kali. Oleh karena itu, keunggulan bukanlah suatu hal perbuatan melainkan suatu kebiasaan",
     rating: 4,
