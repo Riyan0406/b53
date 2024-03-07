@@ -1,14 +1,22 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+import { createRequire } from "module";
+import path from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "src/views"));
-// set stastic file server
-app.use(express.static("src/assets"));
+app.set("views", path.join(__dirname, "src/view"));
 
-// parsing data form client
+// set static file server
+app.use(express.static("src/asset"));
+
+// parsing data from client
 app.use(express.urlencoded({ extended: false }));
 
 // routing
@@ -33,6 +41,7 @@ app.post("/add-project", (req, res) => {
   console.log(req.body);
   res.redirect("/");
 });
+
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
 });
