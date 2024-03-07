@@ -11,31 +11,79 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="/src/asset/css/style.css" />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+
   <body class="contener-card">
-    <nav>
-      <div class="navigation">
-        <div class="nav-left">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
           <img
+            class=""
             src="/src/asset/image/3bf826d15ceb64dfc9d3712f5a451838-removebg-preview.png"
             alt=""
+            style="width: 50px"
           />
-          <a href="/view/index.html">Home</a>
-          <a href="">My Project</a>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                style="color: #eaa81b"
+                class="nav-link active fw-bold"
+                aria-current="page"
+                href="/src/view/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                style="color: #eaa81b"
+                class="nav-link fw-bold"
+                href="/src/view/project.html"
+                >Add Project</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                style="color: #eaa81b"
+                class="nav-link fw-bold"
+                href="/src/view/testimonial.html"
+                >My Testimonial</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="nav-right">
-          <a href="/view/contact.html">Contact Me</a>
-        </div>
+        <a href="/src/view/contact.html"
+          ><button
+            type="button"
+            class="btn"
+            style="background-color: #eaa81b; color: #004643"
+          >
+            Contact Me
+          </button></a
+        >
       </div>
     </nav>
-
     <hr />
     <div class="contener-conten">
       <div class="conten-left">
@@ -83,5 +131,73 @@
         </div>
       </div>
     </div>
+    <div
+      class="d-flex justify-content-center flex-wrap gap-3 p-4 bg-body-secondary"
+      id="contents"
+    >
+      <div
+        class="card-form d-flex flex-column justify-content-between border rounded p-4"
+        style="background-color: #9dbc98; width: 300px"
+      >
+        <div class="kelas3">
+          <img
+            style="width: 100%; height: 190px; border-radius: 7px"
+            src="/src/asset/image/AI.avif"
+            alt=""
+          />
+        </div>
+        <div class="">
+          <a class="nav-link text-light fw-bold fs-5" href="/detail-project"
+            >Teknologi Terbaru 2023</a
+          >
+          <div class="text-light" style="font-size: 10px; font-weight: 200">
+            <p>5 September 2023 12:30 WIB | Riyan Maulana</p>
+          </div>
+
+          <p class="text-light" style="text-align: justify">
+            teknologi terbaru ini akan buming pada tahun 2024 nanti , jadi
+            persiapkan diri kalian wahai programmer
+          </p>
+        </div>
+        <div class="text-light d-flex gap-3" style="font-size: 20px">
+          <i class="fa-brands fa-golang"></i>
+          <i class="fa-brands fa-java"></i>
+          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-node-js"></i>
+        </div>
+
+        <div
+          class="d-flex justify-content-center align-items-end mt-2"
+          style="width: 100%"
+        >
+          <div class="w-50">
+            <button
+              class="d-flex justify-content-center border-0 fw-bold"
+              style="padding: 3px 35px; background-color: #f9bc60"
+            >
+              Delete
+            </button>
+          </div>
+          <div class="w-50">
+            <button
+              class="d-flex justify-content-center border-0 fw-bold"
+              style="
+                padding: 3px 46px;
+                margin-left: 2px;
+                background-color: #f9bc60;
+              "
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="/src/asset/js/humburger.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
 </html>

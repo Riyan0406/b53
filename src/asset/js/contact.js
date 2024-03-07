@@ -1,7 +1,7 @@
 function submitData() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const number = document.getElementById("nomer").value;
+  const number = document.getElementById("nomber").value;
   const select = document.getElementById("input-select").value;
   const message = document.getElementById("Description").value;
 
