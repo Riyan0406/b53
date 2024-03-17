@@ -18,16 +18,14 @@
     />
   </head>
   <body style="background-color: #004643">
-    <nav class="navbar navbar-expand-lg" style="background-color: #004643">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            class=""
-            src="/image/3bf826d15ceb64dfc9d3712f5a451838-removebg-preview.png"
+    <nav style="background-color: #004643" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="/"><img
+            src="/image/logo.png"
+            style="width: 40px; height: 40px"
             alt=""
-            style="width: 35px"
-          />
-        </a>
+            srcset=""
+          /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,37 +41,62 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active text-light fw-bold"
-                style="color: #eaa81b"
+                class="nav-link text-light fw-bold ms-2"
                 aria-current="page"
                 href="/"
               >Home</a>
             </li>
             <li class="nav-item">
-              <a
-                style="color: #eaa81b"
-                class="nav-link text-light fw-bold"
-                href="/add-project"
-              >Add Project</a>
+              {{#if isLogin}}
+                <a
+                  class="nav-link text-light fw-bold ms-2"
+                  aria-current="true"
+                  href="/add-project"
+                  style="color: #f9bc60"
+                >Add Project</a>
+              {{/if}}
             </li>
-
             <li class="nav-item">
               <a
-                style="color: #eaa81b"
-                class="nav-link fw-bold"
+                class="nav-link text-light fw-bold ms-2"
                 href="/testimonial"
-              >My Testimonial</a>
+              >Testimonial</a>
             </li>
           </ul>
+          <div class="d-flex" role="search">
+            {{#if isLogin}}
+              <a
+                class="nav-link px-2 fw-bold"
+                style="color: #f9bc60;"
+                href="/registrasi"
+              >Hallo , {{user}}</a>
+              <a
+                class="nav-link px-2 fw-bold"
+                style="color: #f9bc60;"
+                href="/logout"
+              >Logout</a>
+            {{else}}
+              <a
+                class="nav-link px-2 fw-bold"
+                style="color: #f9bc60;"
+                href="/register"
+              >Registrasi</a>
+              <a
+                class="nav-link px-2 fw-bold"
+                style="color: #f9bc60; margin-right: 10px"
+                href="/login"
+              >Login</a>
+            {{/if}}
+            <button
+              class="border border-0 me-4 rounded"
+              type="submit"
+              style="background-color: #f9bc60"
+            >
+              <a class="nav-link text-dark px-2 fw-bold" href="/contact">Contact
+                Me</a>
+            </button>
+          </div>
         </div>
-        <a href="/contact" style="color: #004643"><button
-            type="button"
-            class="btn"
-            ;
-            style="background-color: #eaa81b"
-          >
-            Contact Me
-          </button></a>
       </div>
     </nav>
 
@@ -170,7 +193,8 @@
               href="/detail-project/{{@index}}"
             >{{this.title}}</a>
             <div class="text-light" style="font-size: 10px; font-weight: 200">
-              <p>{{this.created_ad}}|</p>
+              <p>{{this.created_at}}|
+                {{this.durasiProject}}|{{this.authorname}}</p>
             </div>
 
             <p class="text-light" style="text-align: justify">
@@ -183,33 +207,32 @@
             {{/each}}
           </div>
 
-          <div
-            class="d-flex justify-content-center align-items-end mt-2"
-            style="width: 100%"
-          >
-            <div class="w-50">
-              <button
-                class="d-flex justify-content-center border-0 fw-bold"
-                style="padding: 3px 35px; background-color: #f9bc60"
+          {{#if this.isLogin}}
+            {{#if this.isOwner}}
+              <div
+                class="d-flex justify-content-center align-items-end mt-2"
+                style="width: 100%;"
               >
-                <a href="/delete/{{@index}}">Delete</a>
+                <div class="w-50">
+                  <button
+                    class="d-flex justify-content-center border-0 fw-bold"
+                    style=" padding: 3px 35px; background-color: #f9bc60;"
+                  >
+                    <a class="nav-link" href="/delete/{{this.id}}">Hapus</a>
+                  </button>
+                </div>
+                <div class="w-50">
+                  <button
+                    class="d-flex justify-content-center border-0 fw-bold"
+                    style=" padding: 3px 46px; margin-left: 2px; background-color: #f9bc60;"
+                  >
+                    <a class="nav-link" href="/edit/{{this.id}}">Edit</a>
+                  </button>
+                </div>
+              </div>
+            {{/if}}
+          {{/if}}
 
-              </button>
-            </div>
-            <div class="w-50">
-              <button
-                class="d-flex justify-content-center border-0 fw-bold"
-                style="
-                padding: 3px 46px;
-                margin-left: 2px;
-                background-color: #f9bc60;
-              "
-              >
-                <a href="/edit/{{@index}}">Edit</a>
-
-              </button>
-            </div>
-          </div>
         </div>
       {{/each}}
     </div>

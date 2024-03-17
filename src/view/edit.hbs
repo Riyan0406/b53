@@ -106,7 +106,7 @@
               class="form-control bg-body-secondary"
               name="startDate"
               id="startdate"
-              value="{{dataDami.startDate}}"
+              value="{{dataDami.start_date}}"
             />
           </div>
           <div class="w-50 p-1">
@@ -116,7 +116,7 @@
               class="form-control bg-body-secondary"
               name="endDate"
               id="enddate"
-              value="{{dataDami.endDate}}"
+              value="{{dataDami.end_date}}"
             />
           </div>
         </div>
@@ -130,7 +130,7 @@
             name="Description"
             id="descrip"
             style="resize: none; height: 100px"
-          >{{dataDami.Description}}</textarea>
+          >{{dataDami.description}}</textarea>
         </div>
         <div class="">
           <label class="text-light" for="Technologies ">Technologies</label>
@@ -141,7 +141,7 @@
               name="Technologies"
               value="node-js"
               id="node"
-              {{#if (arrayIncludes dataDami.Technologies 'node-js')}}checked{{/if}}
+              {{#if (arrayIncludes dataDami.technologies 'node-js')}}checked{{/if}}
             />
             <label class="text-light" for="node">Node Js</label>
             <input
@@ -150,7 +150,7 @@
               name="Technologies"
               value="golang"
               id="golang"
-              {{#if (arrayIncludes dataDami.Technologies 'golang')}}checked{{/if}}
+              {{#if (arrayIncludes dataDami.technologies 'golang')}}checked{{/if}}
             />
             <label class="text-light" for="golang">Golang</label>
           </div>
@@ -161,7 +161,7 @@
               name="Technologies"
               value="react"
               id="react"
-              {{#if (arrayIncludes dataDami.Technologies 'react')}}checked{{/if}}
+              {{#if (arrayIncludes dataDami.technologies 'react')}}checked{{/if}}
             />
             <label class="text-light" for="react">React Js</label>
             <input
@@ -170,7 +170,7 @@
               name="Technologies"
               value="java"
               id="java"
-              {{#if (arrayIncludes dataDami.Technologies 'java')}}checked{{/if}}
+              {{#if (arrayIncludes dataDami.technologies 'java')}}checked{{/if}}
             />
             <label class="text-light" for="java">Java</label>
           </div>
